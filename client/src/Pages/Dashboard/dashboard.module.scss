@@ -1,6 +1,117 @@
+$primary-color: #f96d00;
+$secondary-color: #393e46;
+$third-color: #222831;
+$fourth-color: #f2f2f2;
+$lightGrey-color: #606470;
+
 .container {
-    margin-top: 4rem;
-    composes: third from "../../Assets/styles/colors.module.scss";
+    margin-top: 1rem;
+    background-color: $third-color;
     color: white;
     height: 100vh;
+}
+
+/* ----------------------------------------------------------------------
+    HEADER 
+ ---------------------------------------------------------------------- */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.headerTitle {
+    font-size: 2rem;
+    color: $primary-color;
+}
+
+.subText {
+    color: $fourth-color;
+    width: 75%;
+    font-size: 0.75rem;
+}
+
+/* ----------------------------------------------------------------------
+    POLL FORM
+ ---------------------------------------------------------------------- */
+
+.pollContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.pollForm {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    border-radius: 4px;
+    padding: 2rem;
+    background-color: $secondary-color;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.inputField:nth-of-type(1) {
+    margin-bottom: 2rem;
+}
+.inputField {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    background-color: $lightGrey-color;
+    color: $fourth-color;
+}
+
+.inputField:focus {
+    outline-color: $primary-color;
+    border: #f96d00;
+}
+
+.formBtn {
+    margin-top: 2rem;
+    width: 12rem;
+    background-color: $primary-color;
+    color: $fourth-color;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+}
+
+.formBtn:hover {
+    opacity: 75%;
+    outline: 2px solid $fourth-color;
+}
+/* ----------------------------------------------------------------------
+    MEDIA QUERIES
+ ---------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 2rem;
+    }
+
+    .subText {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #393e46;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #393e46;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #393e46;
 }

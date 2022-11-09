@@ -1,9 +1,10 @@
 .navContainer {
     display: flex;
     justify-content: center;
-    height: 6rem;
+    height: 4rem;
     align-items: center;
-    composes: primary from "../../Assets/styles/colors.module.scss";
+    composes: third from "../../Assets/styles/colors.module.scss";
+    border-bottom: 2px solid #393e46;
 }
 .navListWrapper {
     display: flex;
@@ -12,5 +13,11 @@
 }
 
 .navLinks {
-    composes: primary from "../../Assets/styles/fonts.module.scss";
+    composes: fourth from "../../Assets/styles/fonts.module.scss";
+}
+
+@media (min-width: 768px) {
+    .navContainer {
+        height: 6rem;
+    }
 }

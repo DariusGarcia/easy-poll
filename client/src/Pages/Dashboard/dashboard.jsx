@@ -3,7 +3,43 @@ import dashboard from './dashboard.module.scss'
 import React from 'react'
 
 const Dashboard = () => {
-	return <div class={dashboard.container}>Create a poll</div>
+	return (
+		<div className={dashboard.container}>
+			<header className={dashboard.header}>
+				<h1 className={dashboard.headerTitle}> Create a poll</h1>
+				<p className={dashboard.subText}>
+					Complete the fields down below to start a new poll.
+				</p>
+			</header>
+
+			<main className={dashboard.pollContainer}>
+				<form className={dashboard.pollForm}>
+					<label htmlFor='question' className={dashboard.formLabel}>
+						Title
+					</label>
+					<input
+						type='text'
+						placeholder='Enter poll question'
+						className={dashboard.inputField}
+					/>
+					<label htmlFor='question' className={dashboard.formLabel}>
+						Answer Options
+					</label>
+					<input
+						type='text'
+						placeholder='Option 1'
+						className={dashboard.inputField}
+					/>
+					<input
+						type='text'
+						placeholder='Option 2'
+						className={dashboard.inputField}
+					/>
+					<button className={dashboard.formBtn}>Create Poll</button>
+				</form>
+			</main>
+		</div>
+	)
 }
 
 export default Dashboard
