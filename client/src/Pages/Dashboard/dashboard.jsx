@@ -35,7 +35,11 @@ const Dashboard = () => {
 						placeholder='Option 2'
 						className={dashboard.inputField}
 					/>
-					<button className={dashboard.formBtn}>Create Poll</button>
+					<button className={dashboard.addBtn}>Add option +</button>
+					<div className={dashboard.btnContainer}>
+						<button className={dashboard.formBtn}>Create Poll</button>
+						<button className={dashboard.formBtn}>Save as draft</button>
+					</div>
 				</form>
 			</main>
 		</div>

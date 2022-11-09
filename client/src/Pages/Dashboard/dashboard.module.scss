@@ -9,6 +9,7 @@ $lightGrey-color: #606470;
     background-color: $third-color;
     color: white;
     height: 100vh;
+    font-family: "Roboto Mono", monospace;
 }
 
 /* ----------------------------------------------------------------------
@@ -46,9 +47,9 @@ $lightGrey-color: #606470;
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 50%;
+    width: 100%;
+    padding: 1rem;
     border-radius: 4px;
-    padding: 2rem;
     background-color: $secondary-color;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
@@ -64,6 +65,7 @@ $lightGrey-color: #606470;
     width: 100%;
     background-color: $lightGrey-color;
     color: $fourth-color;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 .inputField:focus {
@@ -71,16 +73,50 @@ $lightGrey-color: #606470;
     border: #f96d00;
 }
 
+.addBtn {
+    margin-top: 1rem;
+    width: 8rem;
+    background-color: $lightGrey-color;
+    color: $fourth-color;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    font-family: "Roboto Mono", monospace;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+}
 .formBtn {
     margin-top: 2rem;
-    width: 12rem;
+    width: 16rem;
     background-color: $primary-color;
     color: $fourth-color;
     padding: 1rem;
     border-radius: 4px;
     border: none;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    font-family: "Roboto Mono", monospace;
 }
 
+.formBtn:nth-of-type(2) {
+    margin-top: 2rem;
+    width: 16rem;
+    background-color: $lightGrey-color;
+    color: $fourth-color;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    font-family: "Roboto Mono", monospace;
+}
+
+.addBtn:hover {
+    opacity: 75%;
+    outline: 2px solid $fourth-color;
+}
 .formBtn:hover {
     opacity: 75%;
     outline: 2px solid $fourth-color;
@@ -104,6 +140,7 @@ $lightGrey-color: #606470;
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #393e46;
     opacity: 1; /* Firefox */
+    font-family: "Roboto Mono", monospace;
 }
 
 :-ms-input-placeholder {
@@ -114,4 +151,17 @@ $lightGrey-color: #606470;
 ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: #393e46;
+}
+
+@media (min-width: 1198px) {
+    .pollForm {
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .btnContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
 }
