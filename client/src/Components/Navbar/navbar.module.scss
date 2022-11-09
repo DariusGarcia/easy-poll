@@ -1,0 +1,16 @@
+.navContainer {
+    display: flex;
+    justify-content: center;
+    height: 6rem;
+    align-items: center;
+    composes: primary from "../../Assets/styles/colors.module.scss";
+}
+.navListWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.navLinks {
+    composes: primary from "../../Assets/styles/fonts.module.scss";
+}

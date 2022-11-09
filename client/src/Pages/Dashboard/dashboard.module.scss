@@ -1,0 +1,6 @@
+.container {
+    margin-top: 4rem;
+    composes: third from "../../Assets/styles/colors.module.scss";
+    color: white;
+    height: 100vh;
+}
